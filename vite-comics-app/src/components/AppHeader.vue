@@ -72,7 +72,7 @@ export default {
 
 </script>
 
-<template lang="">
+<template>
     <header>
         <!-- Container -->
         <div class="container">
@@ -102,49 +102,40 @@ export default {
     header {
         height: 120px;
 
-        .container {
-            max-width: 1600px;
-            margin: 0 auto;
-            height: 100%;
+        .row {
+            justify-content: space-between;
 
-            .row {
-                width: 100%;
+            .col {
                 height: 100%;
                 display: flex;
-                justify-content: space-between;
+                align-items: center;
 
-                .col {
+                img {
+                    width: 80%;
+                    cursor: pointer;
+                }
+
+                ul {
                     height: 100%;
                     display: flex;
                     align-items: center;
+                }
 
-                    img {
-                        width: 80%;
-                        cursor: pointer;
-                    }
-
-                    ul {
-                        height: 100%;
-                        display: flex;
-                        align-items: center;
-                    }
-
-                    li {
-                        display: flex;
-                        align-items: center;
-                        height: 100%;
-                        font-size: 14px;
-                        font-weight: 700;
-                        padding: 15px;
-                        border-bottom: 5px solid transparent;
-                        cursor: pointer;
-                    }
-                    .active {
-                        color: #0282F9;
-                        border-bottom-color: #0282F9;
-                    }
+                li {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    font-size: 14px;
+                    font-weight: 700;
+                    padding: 15px;
+                    border-bottom: 5px solid transparent;
+                    cursor: pointer;
+                }
+                .active {
+                    color: #0282F9;
+                    border-bottom-color: #0282F9;
                 }
             }
         }
-    }    
+    }   
 </style>

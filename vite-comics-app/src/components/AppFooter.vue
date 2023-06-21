@@ -1,45 +1,18 @@
 <script>
-export default {
-    data() {
-        return {
+import AppFooterBanner from './AppFooterBanner.vue';
 
-        }
+export default {
+    components: {
+        AppFooterBanner
     },
 }
 </script>
 
 <template lang="">
     <footer>
-        <!-- Container Fluid -->
-        <div class="container-fluid banner-container">
-            <!-- Banner Container -->
-            <div class="container">
-                <!-- Banner Row -->
-                <div class="row">
-                    <div class="banner-col">
-                        <img src="../assets/buy-comics-digital-comics.png" alt="banner-image-1">
-                        <span>DIGITAL COMICS</span>
-                    </div>
-                    <div class="banner-col">
-                        <img src="../assets/buy-comics-merchandise.png" alt="banner-image-2">
-                        <span>DC MERCHANDISE</span>
-                    </div>
-                    <div class="banner-col">
-                        <img src="../assets/buy-comics-subscriptions.png" alt="banner-image-3">
-                        <span>SUBSCRIPTION</span>
-                    </div>
-                    <div class="banner-col">
-                        <img src="../assets/buy-comics-shop-locator.png" alt="banner-image-4">
-                        <span>COMICS SHOP LOCATOR</span>
-                    </div>
-                    <div class="banner-col">
-                        <img src="../assets/buy-dc-power-visa.svg" alt="banner-image-5">
-                        <span>DC POWER VISA</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Container Fluid -->
+        <!-- Footer Banner -->
+        <AppFooterBanner/>
+        <!-- Footer Menu -->
         <div class="container-fluid menu-container">
             <!-- Menu Container -->
             <div class="container">
@@ -200,126 +173,84 @@ export default {
 
     footer {
         width: 100%;
-        height: calc(100vh - 270px);
         background-color: blue;
         color: $primaryColor;
 
         .container-fluid {
-            width: 100%;
             padding: 10px 20px;
 
-            .container {
-                max-width: 1600px;
-                margin: 0 auto;
-                height: 100%;
+            .row {
+                padding: 10px;
 
-                .row {
-                    width: 100%;
+                .col {
+                    width: calc(100% / 2);
+                }
+
+                .menu-col {
                     height: 100%;
-                    padding: 10px;
+                    margin-right: 50px;
+
+                    h3 {
+                        margin: 15px 0px;
+                    }
+
+                    li {
+                        padding: 5px 0px;
+                        color: #959595;
+
+                        a:hover {
+                            color: $primaryColor;
+                        }
+                    }
+                }
+
+                .background-logo-sub-col {
                     display: flex;
-                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    width: 100%;
+                    padding-top: 100px;
 
-                    .col {
-                        width: calc(100% / 2);
-                    }
-
-                    .banner-col {
-                        width: calc(100% / 5 - 40px);
-                        margin: 0 20px;
-                        height: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-
-                        img {
-                            width: 20%;
-                        }
-
-                        span {
-                            margin-left: 20px;
-                            font-size: 15px;
-                        }
-
-                        img,
-                        span {
-                            cursor: pointer;
-                        }
-
-                        img:hover {
-                            filter: invert(100%);
-                        }
-
-                        span:hover {
-                            color: black;
-                            font-weight: 700;
-                        }
-                    }
-
-                    .menu-col {
-                        height: 100%;
-                        margin-right: 50px;
-
-                        h3 {
-                            margin: 15px 0px;
-                        }
-
-                        li {
-                            color: #959595;
-                            padding: 5px 0px;
-
-                            a:hover {
-                                color: $primaryColor;
-                            }
-                        }
-                    }
-
-                    .background-logo-sub-col {
+                    img {
+                        position: absolute;
                         width: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        position: relative;
-
-                        img {
-                            width: 100%;
-                            position: absolute;
-                        }
                     }
+                }
 
-                    .bottom-bar-col {
-                        width: calc(100% / 2 - 50px);
-                        height: 100%;
-                        display: flex;
-                        align-items: center;
+                .bottom-bar-col {
+                    display: flex;
+                    align-items: center;
+                    width: calc(100% / 2 - 50px);
+                    height: 100%;
 
-                        .btn-sign-up {
-                            font-weight: 700;
-                            border: 4px solid $secondaryColor;
-                            padding: 15px 10px;
-                            transition: all 1s;
-                        }
+                    .btn-sign-up {
+                        padding: 15px 10px;
+                        font-weight: 700;
+                        border: 4px solid $secondaryColor;
+                        transition: all 1s;
 
-                        .btn-sign-up:hover {
+                        &:hover {
                             background-color: #fff;
                             color: black;
                         }
                     }
 
-                    .bottom-bar-col:last-child {
-                        justify-content: flex-end;
+                }
 
-                        h4 {
-                            margin: 0 20px;
-                            font-size: 17px;
-                            color: $secondaryColor;
-                        }
+                .bottom-bar-col:last-child {
+                    justify-content: flex-end;
 
-                        a {
-                            padding: 0px 10px;
-                        }
+                    h4 {
+                        margin: 0 20px;
+                        font-size: 17px;
+                        color: $secondaryColor;
+                    }
 
-                        a:hover img {
+                    a {
+                        padding: 0px 10px;
+
+                        &:hover img {
                             filter: brightness(1000%);
                         }
                     }
@@ -327,21 +258,19 @@ export default {
             }
         }
 
-        .banner-container {
-            height: 160px;
-            background-color: #0282F9;
-        }
-
         .menu-container {
-            height: calc(100% - 260px);
             background-image: url(../assets/footer-bg.jpg);
             background-size: cover;
             overflow-y: hidden;
+            padding-bottom: 150px;
         }
 
         .bottom-bar-container {
-            height: 100px;
             background-color: #303030;
+
+            .row {
+                align-items: center;
+            }
         }
     }
 </style>
