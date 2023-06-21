@@ -97,54 +97,54 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../styles/partials/variables' as *;
+    @use '../styles/partials/variables' as *;
 
-header {
-    height: 120px;
+    header {
+        height: 120px;
 
-    .container {
-        max-width: 1600px;
-        margin: 0 auto;
-        height: 100%;
-
-        .row {
-            width: 100%;
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
             height: 100%;
-            display: flex;
-            justify-content: space-between;
 
-            .col {
+            .row {
+                width: 100%;
                 height: 100%;
                 display: flex;
-                align-items: center;
+                justify-content: space-between;
 
-                img {
-                    width: 80%;
-                    cursor: pointer;
-                }
-
-                ul {
+                .col {
                     height: 100%;
                     display: flex;
                     align-items: center;
-                }
 
-                li {
-                    display: flex;
-                    align-items: center;
-                    height: 100%;
-                    font-size: 14px;
-                    font-weight: 700;
-                    padding: 15px;
-                    border-bottom: 5px solid transparent;
-                    cursor: pointer;
-                }
-                .active {
-                    color: #0282F9;
-                    border-bottom-color: #0282F9;
+                    img {
+                        width: 80%;
+                        cursor: pointer;
+                    }
+
+                    ul {
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    li {
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                        font-size: 14px;
+                        font-weight: 700;
+                        padding: 15px;
+                        border-bottom: 5px solid transparent;
+                        cursor: pointer;
+                    }
+                    .active {
+                        color: #0282F9;
+                        border-bottom-color: #0282F9;
+                    }
                 }
             }
         }
-    }
-}    
+    }    
 </style>

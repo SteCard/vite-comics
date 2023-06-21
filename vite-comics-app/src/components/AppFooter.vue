@@ -196,152 +196,152 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../styles/partials/variables' as *;
+    @use '../styles/partials/variables' as *;
 
-footer {
-    width: 100%;
-    height: calc(100vh - 270px);
-    background-color: blue;
-    color: $primaryColor;
-
-    .container-fluid {
+    footer {
         width: 100%;
-        padding: 10px 20px;
+        height: calc(100vh - 270px);
+        background-color: blue;
+        color: $primaryColor;
 
-        .container {
-            max-width: 1600px;
-            margin: 0 auto;
-            height: 100%;
+        .container-fluid {
+            width: 100%;
+            padding: 10px 20px;
 
-            .row {
-                width: 100%;
+            .container {
+                max-width: 1600px;
+                margin: 0 auto;
                 height: 100%;
-                padding: 10px;
-                display: flex;
-                flex-wrap: wrap;
 
-                .col {
-                    width: calc(100% / 2);
-                }
-
-                .banner-col {
-                    width: calc(100% / 5 - 40px);
-                    margin: 0 20px;
+                .row {
+                    width: 100%;
                     height: 100%;
+                    padding: 10px;
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    flex-wrap: wrap;
 
-                    img {
-                        width: 20%;
+                    .col {
+                        width: calc(100% / 2);
                     }
 
-                    span {
-                        margin-left: 20px;
-                        font-size: 15px;
-                    }
+                    .banner-col {
+                        width: calc(100% / 5 - 40px);
+                        margin: 0 20px;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
 
-                    img,
-                    span {
-                        cursor: pointer;
-                    }
+                        img {
+                            width: 20%;
+                        }
 
-                    img:hover {
-                        filter: invert(100%);
-                    }
+                        span {
+                            margin-left: 20px;
+                            font-size: 15px;
+                        }
 
-                    span:hover {
-                        color: black;
-                        font-weight: 700;
-                    }
-                }
+                        img,
+                        span {
+                            cursor: pointer;
+                        }
 
-                .menu-col {
-                    height: 100%;
-                    margin-right: 50px;
+                        img:hover {
+                            filter: invert(100%);
+                        }
 
-                    h3 {
-                        margin: 15px 0px;
-                    }
-
-                    li {
-                        color: #959595;
-                        padding: 5px 0px;
-
-                        a:hover {
-                            color: $primaryColor;
+                        span:hover {
+                            color: black;
+                            font-weight: 700;
                         }
                     }
-                }
 
-                .background-logo-sub-col {
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    position: relative;
+                    .menu-col {
+                        height: 100%;
+                        margin-right: 50px;
 
-                    img {
+                        h3 {
+                            margin: 15px 0px;
+                        }
+
+                        li {
+                            color: #959595;
+                            padding: 5px 0px;
+
+                            a:hover {
+                                color: $primaryColor;
+                            }
+                        }
+                    }
+
+                    .background-logo-sub-col {
                         width: 100%;
-                        position: absolute;
-                    }
-                }
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
 
-                .bottom-bar-col {
-                    width: calc(100% / 2 - 50px);
-                    height: 100%;
-                    display: flex;
-                    align-items: center;
-
-                    .btn-sign-up {
-                        font-weight: 700;
-                        border: 4px solid $secondaryColor;
-                        padding: 15px 10px;
-                        transition: all 1s;
+                        img {
+                            width: 100%;
+                            position: absolute;
+                        }
                     }
 
-                    .btn-sign-up:hover {
-                        background-color: #fff;
-                        color: black;
+                    .bottom-bar-col {
+                        width: calc(100% / 2 - 50px);
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+
+                        .btn-sign-up {
+                            font-weight: 700;
+                            border: 4px solid $secondaryColor;
+                            padding: 15px 10px;
+                            transition: all 1s;
+                        }
+
+                        .btn-sign-up:hover {
+                            background-color: #fff;
+                            color: black;
+                        }
                     }
-                }
 
-                .bottom-bar-col:last-child {
-                    justify-content: flex-end;
+                    .bottom-bar-col:last-child {
+                        justify-content: flex-end;
 
-                    h4 {
-                        margin: 0 20px;
-                        font-size: 17px;
-                        color: $secondaryColor;
-                    }
+                        h4 {
+                            margin: 0 20px;
+                            font-size: 17px;
+                            color: $secondaryColor;
+                        }
 
-                    a {
-                        padding: 0px 10px;
-                    }
+                        a {
+                            padding: 0px 10px;
+                        }
 
-                    a:hover img {
-                        filter: brightness(1000%);
+                        a:hover img {
+                            filter: brightness(1000%);
+                        }
                     }
                 }
             }
         }
-    }
 
-    .banner-container {
-        height: 160px;
-        background-color: #0282F9;
-    }
+        .banner-container {
+            height: 160px;
+            background-color: #0282F9;
+        }
 
-    .menu-container {
-        height: calc(100% - 260px);
-        background-image: url(../assets/footer-bg.jpg);
-        background-size: cover;
-        overflow-y: hidden;
-    }
+        .menu-container {
+            height: calc(100% - 260px);
+            background-image: url(../assets/footer-bg.jpg);
+            background-size: cover;
+            overflow-y: hidden;
+        }
 
-    .bottom-bar-container {
-        height: 100px;
-        background-color: #303030;
+        .bottom-bar-container {
+            height: 100px;
+            background-color: #303030;
+        }
     }
-}
 </style>
